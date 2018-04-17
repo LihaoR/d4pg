@@ -188,8 +188,8 @@ tf.reset_default_graph()
 
 global_episodes = tf.Variable(0,dtype=tf.int32,name='global_episodes',trainable=False)
 
-atrainer = tf.train.AdamOptimizer(learning_rate=0.0001)
-ctrainer = tf.train.AdamOptimizer(learning_rate=0.001)
+atrainer = tf.train.AdamOptimizer(learning_rate=0.001)
+ctrainer = tf.train.AdamOptimizer(learning_rate=0.002)
 
 master_network = AC_Network(s_size,a_size,'global',None,None)
 num_workers = 4

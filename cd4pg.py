@@ -13,7 +13,6 @@ import gym
 from time import sleep
 
 GLOBAL_STEP = 0
-
 def update_target_graph(from_scope,to_scope):
     from_vars = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, from_scope)
     to_vars = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, to_scope)

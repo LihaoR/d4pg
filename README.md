@@ -1,9 +1,3 @@
 # d4pg
-actually, it's d3pg, I didn't change value to distribution, I think it's unnecessary.
-and 2 workers is enough for this game.
 
-d4pg.py is much faster than cd4gp.py
-
-until now, my d4pg is not very stable, and it may be hard to converge.
-
-in Pendulum-v0, d3pg is much faster than d4pg
+I use qr dqn with MSE loss to replace c51 dqn. More informations about qr dqn are in my another profile "qrdqn"

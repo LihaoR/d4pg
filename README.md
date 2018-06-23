@@ -10,7 +10,7 @@ original code is from morvan.
 
 ## To do 
 
-prioritized experience replay, and n-step return. In Pendulum, multi-step return may not be better than one-step return after serveral experiments.
+prioritized experience replay, and n-step return. In Pendulum, I think multi-step return may not be better than one-step return after serveral experiments.
 
 ## paper
 

@@ -149,12 +149,14 @@ class Worker(object):
         for i in range(MAX_EPISODES):
             s = env.reset()
             ep_reward = 0
+            #a_past = 0 # if ou process
             for j in range(MAX_EP_STEPS):
                 #if self.name == '0':
                 #    env.render()
 
                 a = self.D.choose_action(s)
-                a = np.clip(np.random.normal(a, self.var), -2, 2)    # add randomness to action selection for exploration
+                a = np.clip(np.random.normal(a, self.var), -2, 2)# add randomness to action selection for exploration
+                a = np.clip((np.random.normal(a, self.var) + a_past - theta * a_past), -2, 2) # if ou process
                 s_, r, done, info = env.step(a)
                 
                 self.D.store_transition(s, a, r/10, s_)
@@ -165,6 +167,7 @@ class Worker(object):
             
                 s = s_
                 ep_reward += r
+                #a_past = a # if ou process
                 if j == MAX_EP_STEPS-1:
                     print('name', self.name, 'Episode:', i, ' Reward: %i' % int(ep_reward), 'Explore: %.2f' % self.var, )
                     break

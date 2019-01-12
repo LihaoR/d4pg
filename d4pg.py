@@ -137,6 +137,7 @@ a_dim = env.action_space.shape[0]
 a_bound = env.action_space.high
 
 var = 3  # control exploration
+theta = 0.5
 
 class Worker(object):
     def __init__(self, name, globalD):

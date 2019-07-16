@@ -6,6 +6,8 @@ distribution value and async.
 
 I use qr dqn's value distribution with MSE loss to replace c51 dqn's distribution. More informations about qr dqn are in my another profile [c51-qr-dqn](https://github.com/LihaoR/c51-qr-dqn)
 
+In my experiment, in continuous control, distribution value is not better than vanilla ddpg.
+
 original code is from morvan.
 
 ## To do 
